@@ -9,5 +9,5 @@ app.get('/hello', () => {
 app.listen({
     port: 3333,
 }).then(() => {
-    console.log('Server runing at port: 3333')
+    console.log('Server runing 3333')
 });
