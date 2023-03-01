@@ -1,9 +1,11 @@
 import fastify from "fastify";
+import { setupKnex } from "./database.js";
 
 const app = fastify();
 
-app.get('/hello', () => {
-    return 'Hello World!';
+app.get('/hello', async () => {
+    const tables = await setupKnex('sqlite_schema').select('*');
+    return tables
 })
 
 app.listen({
