@@ -1,4 +1,4 @@
 node_modules
-tmp/app.db
+db/app.db
 # Keep environment variables out of version control
 .env
